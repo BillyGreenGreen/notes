@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dim"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:foreground="@drawable/dimming" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#353535"
+        tools:context=".EditNote">
+
+        <EditText
+            android:id="@+id/noteTitle"
+            android:layout_width="349dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="77dp"
+            android:layout_marginEnd="95dp"
+            android:layout_marginBottom="583dp"
+            android:backgroundTint="#00FFFFFF"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_bold"
+            android:hint="New Note..."
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#A8A8A8"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/noteContent"
+            android:layout_width="352dp"
+            android:layout_height="568dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/note_edit_full"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start|top"
+            android:hint="Type something..."
+            android:inputType="textMultiLine"
+            android:paddingLeft="40px"
+            android:paddingTop="70px"
+            android:paddingRight="45px"
+            android:paddingBottom="70px"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#A8A8A8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteTitle"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/colourPicker"
+            android:layout_width="38dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="327dp"
+            android:layout_marginTop="631dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="48dp"
+            android:background="#00FFFFFF"
+            android:hapticFeedbackEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.615"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888"
+            app:srcCompat="@drawable/colourpicker" />
+
+        <ImageButton
+            android:id="@+id/priorityPicker"
+            android:layout_width="38dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="327dp"
+            android:layout_marginTop="595dp"
+            android:layout_marginEnd="33dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/colourPicker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.692"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_action_name" />
+
+        <TextView
+            android:id="@+id/priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="5"
+            android:textColor="#A6A6A6"
+            app:layout_constraintBottom_toBottomOf="@+id/noteContent"
+            app:layout_constraintEnd_toEndOf="@+id/noteContent"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintStart_toStartOf="@+id/noteContent"
+            app:layout_constraintTop_toTopOf="@+id/noteContent"
+            app:layout_constraintVertical_bias="0.015" />
+
+        <ImageButton
+            android:id="@+id/shareButton"
+            android:layout_width="33dp"
+            android:layout_height="23dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.847"
+            app:srcCompat="@drawable/ic_share" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txtEdited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="#a6a6a6"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.93" />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="33dp"
+            android:layout_height="31dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.814"
+            app:srcCompat="@drawable/ic_delete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
